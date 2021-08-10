@@ -22,6 +22,7 @@ namespace Algorithm
                 Console.WriteLine("3. Insertion Sort");
                 Console.WriteLine("4. Bubble Sort");
                 Console.WriteLine("5. Merge Sort");
+                Console.WriteLine("6. AnagramDetection");
                 Console.WriteLine("0: Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -63,6 +64,17 @@ namespace Algorithm
                         MergeSort<string> mergeSort = new MergeSort<string>();
                         mergeSort.Merge_Sort(textArray, start, end-1);
                         mergeSort.Display(textArray);
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter the First String");
+                        string str1 = Console.ReadLine();
+                        Console.WriteLine("Enter the Second String");
+                        string str2 = Console.ReadLine();
+                        bool rs = AnagramDetection.IsAnagram(str1,str2);
+                        if (rs == true)
+                            Console.WriteLine("Strings are Anagram");
+                        else
+                            Console.WriteLine("String are not Anagram");
                         break;
                     case 0:
                         Console.WriteLine("Have a nice day!");
