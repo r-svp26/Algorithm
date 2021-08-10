@@ -25,6 +25,7 @@ namespace Algorithm
                 Console.WriteLine("6. AnagramDetection");
                 Console.WriteLine("7. Prime Number");
                 Console.WriteLine("8. Prime: Palindrome and Anagram");
+                Console.WriteLine("9. Magic Number");
                 Console.WriteLine("0: Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -85,6 +86,11 @@ namespace Algorithm
                     case 8:
                         PrimeNumber.PrintPrime();
                         PrimeNumber.PrintPalindrome();
+                        break;
+                    case 9:
+                        Console.WriteLine("Enter the number");
+                        int num = Convert.ToInt32(Console.ReadLine());
+                        MagicNumber.GuessNumber(num);
                         break;
                     case 0:
                         Console.WriteLine("Have a nice day!");
