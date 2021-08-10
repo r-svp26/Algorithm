@@ -20,6 +20,7 @@ namespace Algorithm
                 Console.WriteLine("1: ArrayPermutation");
                 Console.WriteLine("2: BinarySearchWord");
                 Console.WriteLine("3. Insertion Sort");
+                Console.WriteLine("4. Bubble Sort");
                 Console.WriteLine("0: Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -48,6 +49,12 @@ namespace Algorithm
                         InsertionSort<string> insertionSort = new InsertionSort<string>();
                         insertionSort.Insertion_Sort(textArray);
                         insertionSort.Display(textArray);
+                        break;
+                    case 4:
+                        int[] arr = { 10, 20, 5, 60, 70 };
+                        BubbleSort<int> bubbleSort = new BubbleSort<int>();
+                        bubbleSort.Bubble_Sort(arr);
+                        bubbleSort.Display(arr);
                         break;
                     case 0:
                         Console.WriteLine("Have a nice day!");
